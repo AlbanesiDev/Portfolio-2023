@@ -1,0 +1,9 @@
+@import "/src/sass/abstract/mixins";
+@import "/src/sass/variables/variablesColor";
+@import "/src/sass/variables/variablesSpacing";
+
+.home {
+  scroll-snap-align: start;
+  height: 100vh;
+  width: 100%;
+}

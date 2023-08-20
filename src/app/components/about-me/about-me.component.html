@@ -1,0 +1,20 @@
+<div class="about-me">
+  <div class="card">
+    <div class="card__title-container">
+      <span class="card__title">Sobre Mi</span>
+    </div>
+    <ng-container *ngFor="let about of aboutMe">
+      <div class="col-1">
+        <img [src]="about.img" alt="">
+        <h2>{{ about.name }}</h2>
+        <h2>{{ about.location }}</h2>
+        <h2>{{ about.time }}</h2>
+      </div>
+      <div class="col-2">
+        <p>
+          {{ about.description }}
+        </p>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+@import "/src/sass/abstract/mixins";
+@import "/src/sass/variables/variablesColor";
+@import "/src/sass/variables/variablesSpacing";
+
+.about-me {
+  position: relative;
+  scroll-snap-align: start;
+  height: 100vh;
+  width: 100%;
+  color: $black;
+  .card {
+    @include cardStyle;
+    display: flex;
+    .col-1 {
+      width: 40%;
+      padding: $paddingMd;
+      border-radius: 0.25rem;
+      background-color: $gray;
+    }
+    .col-2 {
+      @include font('', 1.25em, $black);
+      width: 60%;
+      padding: $paddingMd;
+      border-radius: 0.25rem;
+    }
+  }
+}

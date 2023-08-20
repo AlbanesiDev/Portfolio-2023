@@ -1,0 +1,128 @@
+{
+  "about_me": [
+    {
+      "img": "/assets/images/profile/albanesi.png",
+      "name": "Joaquin Albanesi",
+      "location": "Buenos Aires, Argentina",
+      "time": "18:30 (GMT-3)",
+      "description": "Soy un desarrollador frontend ambicioso y autodidacta, tengo 21 años con una gran pasion por la tecnologia, el diseño y el desarrollo web. Llevo programando aproximadamente hace un año y aunque no tengo experiencia laboral directa, he trabajado en proyectos personales para fortalecer mi conjunto de habilidades. Soy competente en la creacion de interfaces de usuario y en la implementacion de funciones modernas. Dispuesto a aprender y colaborar en entornos y configuraciones en constante cambio."
+    }
+  ],
+  "works": [
+    {
+      "title": "BeFaster",
+      "description": "",
+      "stack": {
+
+      }
+    },
+    {
+      "title": "Today's Weather",
+      "description": "",
+      "stack": {
+
+      }
+    },
+    {
+      "title": "CodeCamp",
+      "description": "",
+      "stack": {
+
+      }
+    }
+  ],
+  "skill": [
+    {
+      "name": "HTML",
+      "color": "#e5532dcc",
+      "icon": "/assets/icons/skills/html5.svg",
+      "url": "https://developer.mozilla.org/es/docs/Web/HTML"
+    },
+    {
+      "name": "CSS",
+      "color": "#2d52e5cc",
+      "icon": "/assets/icons/skills/css3-alt.svg",
+      "url": "https://developer.mozilla.org/es/docs/Web/CSS"
+    },
+    {
+      "name": "Bootstrap",
+      "color": "#8719fdcc",
+      "icon": "/assets/icons/skills/bootstrap.svg",
+      "url": "https://getbootstrap.com/"
+    },
+
+    {
+      "name": "javaScript",
+      "color": "#f7df25cc",
+      "icon": "/assets/icons/skills/square-js.svg",
+      "url": "https://developer.mozilla.org/es/docs/Web/JavaScript"
+    },
+    {
+      "name": "TypeScript",
+      "color": "#377dc8cc",
+      "icon": "/assets/icons/skills/square-ts.svg",
+      "url": "https://www.typescriptlang.org/"
+    },
+    {
+      "name": "SASS",
+      "color": "#cf6c9ccc",
+      "icon": "/assets/icons/skills/sass.svg",
+      "url": "https://sass-lang.com/"
+    },
+    {
+      "name": "Angular",
+      "color": "#c50837cc",
+      "icon": "/assets/icons/skills/angular.svg",
+      "url": "https://angular.io/"
+    },
+    {
+      "name": "NgRx",
+      "color": "#bb32d3cc",
+      "icon": "/assets/icons/skills/ngrx.svg",
+      "url": "https://ngrx.io/"
+    },
+    {
+      "name": "Node.js",
+      "color": "#87cf2fcc",
+      "icon": "/assets/icons/skills/node-js.svg",
+      "url": "https://nodejs.org/es"
+    }
+  ],
+  "contact": [
+    { "background": "/assets/images/city/BsAs.jpg" },
+    {
+      "links": [
+        {
+          "name": "Linkedin",
+          "icon": "/assets/icons/contact/linkedin.svg",
+          "url": "https://www.linkedin.com/in/joaquin-albanesi/"
+        },
+        {
+          "name": "WhatsApp",
+          "icon": "/assets/icons/contact/square-whatsapp.svg",
+          "url": "https://api.whatsapp.com/send/?phone=5491125303717"
+        },
+        {
+          "name": "Email",
+          "icon": "/assets/icons/contact/square-envelope.svg",
+          "url": "mailto:joaquinalbanesidev@gmail.com"
+        },
+        {
+          "name": "GitHub",
+          "icon": "/assets/icons/contact/square-github.svg",
+          "url": "https://github.com/AlbanesiDev"
+        },
+        {
+          "name": "Reddit",
+          "icon": "/assets/icons/contact/square-reddit.svg",
+          "url": "https://www.reddit.com/user/AlbanesiDev"
+        },
+        {
+          "name": "Twitter",
+          "icon": "/assets/icons/contact/square-x-twitter.svg",
+          "url": "https://twitter.com/AlbanesiDev"
+        }
+      ]
+    }
+  ]
+}

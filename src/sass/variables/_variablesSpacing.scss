@@ -1,0 +1,41 @@
+$sm: 0.5rem;
+$md: 1rem;
+$lg: 1.25rem;
+$xl: 1.5rem;
+$xxl: 2rem;
+
+$borderRadiusSm: 0.5rem;
+$borderRadiusMd: 1rem;
+$borderRadiusLg: 1.25rem;
+$borderRadiusXl: 1.5rem;
+$borderRadiusXxl: 2rem;
+
+$paddingSm: 0.5rem;
+$paddingMd: 1rem;
+$paddingLg: 1.25rem;
+$paddingXl: 1.5rem;
+$paddingXxl: 2rem;
+$padding1x: 3rem;
+$padding2x: 5rem;
+
+$marginSm: 0.5rem;
+$marginMd: 1rem;
+$marginLg: 1.25rem;
+$marginXl: 1.5rem;
+$marginXxl: 2rem;
+$margin1x: 3rem;
+$margin2x: 5rem;
+
+$borderDesktop: 2.1875rem solid $white;
+$borderTablet: 1.25rem solid $white;
+$borderMobile: 0.9375rem solid $white;
+
+$border-values: (
+  top-left: 35px 17.5px 17.5px 35px,
+  top-right: 35px 35px 17.5px 17.5px,
+  bottom-left: 17.5px 17.5px 35px 35px,
+  bottom-right: 17.5px 35px 35px 17.5px,
+  left: 35px 17.5px 35px 35px,
+  right: 35px 35px 35px 17.5px,
+  left-right: 35px 26px 35px 26px,
+);

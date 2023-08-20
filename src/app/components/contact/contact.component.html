@@ -1,0 +1,19 @@
+<div class="contact">
+  <div class="card">
+    <div class="card__title-container">
+      <span class="card__title">Contacto</span>
+    </div>
+    <img class="card__image" [src]="background" alt="Puente de la mujer, Buenos Aires">
+    <div class="card__data">
+      <div class="card__data-contact">
+        <ng-container *ngFor="let item of links">
+          <a href="{{ item.url }}" target="_blank">
+            <img class="card__data-contact-img" [src]="item.icon" alt="{{item.name}}">
+            <span class="tooltip">{{ item.name }}</span>
+          </a>
+        </ng-container>
+      </div>
+      <span class="card__data-name">Joaquin Albanesi</span>
+    </div>
+  </div>
+</div>

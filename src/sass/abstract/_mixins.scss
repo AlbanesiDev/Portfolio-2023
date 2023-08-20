@@ -1,0 +1,85 @@
+@import '/src/sass/variables/variablesFont';
+@import "/src/sass/variables/variablesColor";
+@import "/src/sass/variables/variablesSpacing";
+
+@mixin flex($direction:row , $wrap: nowrap, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin font($family, $size: 1em, $color, $style: normal) {
+  font-family: $family, sans-serif;
+  font-size: $size;
+  font-style: $style;
+  color: $color;
+}
+
+@mixin titleSection() {
+  @include flex(row, nowrap, space-between, center);
+  @include font("montserrat", $desktopSizeSubtitle, $medium, $ColorText);
+  text-transform: uppercase;
+  margin-bottom: $sm;
+  width: 100%;
+  &-button {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    svg {
+      width: calc(16px + 1.35vw);
+      fill: $blackTransparentHighest;
+    }
+  }
+}
+
+@mixin mediaQuery($breakpoint) {
+  @if $breakpoint == "tablet" {
+    @media (min-width: 768px) and (max-width: 1023px) {
+      @content;
+    }
+  } @else if $breakpoint == "mobile" {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $breakpoint == "desktop" {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' no válido. Use 'tablet', 'mobile' o 'desktop'.";
+  }
+}
+
+@mixin positionAbsolute($pTop: auto, $pRight: auto, $pBottom: auto, $pLeft: auto) {
+  position: absolute;
+  top: $pTop;
+  right: $pRight;
+  bottom: $pBottom;
+  left: $pLeft;
+}
+
+@mixin cardStyle() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  border: 16px solid white;
+  border-radius: 0.5rem;
+  width: 750px;
+  height: 550px;
+  .card__title-container {
+    @include flex(row, nowrap, flex-start);
+    @include positionAbsolute(175px, -235px);
+    height: 50px;
+    width: 400px;
+    transform: rotate(90deg);
+    .card__title {
+      @include font("", 1.5em, $white);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
+}
