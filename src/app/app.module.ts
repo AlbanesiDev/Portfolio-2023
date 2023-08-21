@@ -9,6 +9,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BackgroundComponent } from './components/background/background.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     WorksComponent,
     SkillsComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,

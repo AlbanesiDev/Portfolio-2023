@@ -9,5 +9,24 @@
   width: 100%;
   .card {
     @include cardStyle;
+    display: grid;
+    overflow-y: scroll;
+    flex-direction: column;
+    gap: 1rem 1rem;
+    .card__works {
+
+      background-color: rgb(127, 127, 127);
+      height: 350px;
+      &-img {
+        width: 100%;
+        &:hover {
+          transform: translate(0.9);
+        }
+      }
+      &-name {
+      }
+      &-tech {
+      }
+    }
   }
 }

@@ -7,21 +7,48 @@
   scroll-snap-align: start;
   height: 100vh;
   width: 100%;
-  color: $black;
+  @include font("", 1.25em, $white);
   .card {
     @include cardStyle;
     display: flex;
     .col-1 {
+      @include flex(column, nowrap, flex-start, flex-start);
       width: 40%;
       padding: $paddingMd;
+      background: linear-gradient(
+        180deg,
+        rgba(137, 28, 253, 0.7),
+        rgba(137, 28, 253, 0.5),
+        rgba(137, 28, 253, 0.2)
+      );
       border-radius: 0.25rem;
-      background-color: $gray;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      .card__img {
+        border-radius: 0.25rem;
+        border: 5px solid rgba(0, 0, 0, 0.4);
+      }
+      svg {
+        width: 1.5em;
+        padding-right: 0.25rem;
+        filter: invert(1) drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+      }
+      .card__name {
+        font-size: 1.25em;
+        font-weight: 600;
+        margin: $md 0;
+      }
+      .card__date {
+        @include flex;
+        margin-bottom: 0.25rem;
+        font-size: 1em;
+      }
     }
     .col-2 {
-      @include font('', 1.25em, $black);
       width: 60%;
       padding: $paddingMd;
       border-radius: 0.25rem;
+      color: $black;
     }
   }
 }

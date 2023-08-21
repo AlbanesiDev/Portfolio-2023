@@ -1,6 +1,18 @@
 <div class="works">
   <div class="card">
-works
-
+    <div class="card__title-container">
+      <span class="card__title">Proyectos</span>
+    </div>
+    <ng-container *ngFor="let item of list">
+      <div class="card__works">
+        <img class="card__works-img" [src]="item.img" alt="">
+        <h2 class="card__works-name">
+          {{ item.name }}
+        </h2>
+        <div class="card__works-tech">
+          {{ item.tech }}
+        </div>
+      </div>
+    </ng-container>
   </div>
 </div>

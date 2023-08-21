@@ -3,6 +3,8 @@
 @import "/src/sass/variables/variablesSpacing";
 
 .home {
+  @include flex;
+  @include font('', 4em, $white);
   scroll-snap-align: start;
   height: 100vh;
   width: 100%;
