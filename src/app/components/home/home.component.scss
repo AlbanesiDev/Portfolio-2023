@@ -3,9 +3,23 @@
 @import "/src/sass/variables/variablesSpacing";
 
 .home {
-  @include flex;
+  position: relative;
   @include font('', 4em, $white);
   scroll-snap-align: start;
   height: 100vh;
   width: 100%;
+
+  .home__canvas {
+    @include positionAbsolute(0,0);
+    width: 100%;
+    height: 100%;
+  }
+
+  .home__name {
+    @include positionAbsolute(70%, 50%);
+    transform: translate(50%, -50%);
+    z-index: 2;
+    pointer-events: none;
+    color: rgb(255, 255, 255);
+  }
 }

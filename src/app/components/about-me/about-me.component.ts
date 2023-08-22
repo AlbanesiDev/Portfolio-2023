@@ -17,7 +17,6 @@ export class AboutMeComponent {
   ngOnInit(){
     this.dataService.getData().subscribe((data) => {
       this.aboutMe = data.about_me;
-      console.log(data.about_me);
     })
   }
 }

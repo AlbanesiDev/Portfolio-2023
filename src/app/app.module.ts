@@ -10,6 +10,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BackgroundComponent } from './components/background/background.component';
+import { RouterModule } from '@angular/router';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,14 @@ import { BackgroundComponent } from './components/background/background.componen
     SkillsComponent,
     ContactComponent,
     HomeComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
