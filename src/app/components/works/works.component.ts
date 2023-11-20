@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
+import { ModalService } from 'src/app/services/modal.service';
+import { DataModel, Work } from 'src/app/models/data.model';
 
 @Component({
   selector: 'app-works',
@@ -6,26 +9,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./works.component.scss'],
 })
 export class WorksComponent {
-  list = [
-    {
-      name: 'befaster',
-      img: '/assets/images/befaster.png',
-      tech: ''
-    },
-    {
-      name: 'ecomerce',
-      img: '/assets/images/befaster.png',
-      tech: ''
-    },
-    {
-      name: 'befaster',
-      img: '/assets/images/befaster.png',
-      tech: ''
-    },
-    {
-      name: 'ecomerce',
-      img: '/assets/images/befaster.png',
-      tech: ''
-    },
-  ];
+  dataProjects: Work[] = [];
+
+  constructor(
+    private modalService: ModalService,
+    private dataService: DataService
+  ){
+    this.dataService.getData().subscribe((data: DataModel) => {
+      this.dataProjects = data.works;
+      // this.dataStack = data.works[0].stack;
+    })
+  }
+  openModal(id: number){
+    this.modalService.openModal(id);
+  }
 }

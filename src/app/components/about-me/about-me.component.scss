@@ -7,19 +7,20 @@
   scroll-snap-align: start;
   height: 100vh;
   width: 100%;
+  z-index: 10;
   @include font("", 1.25em, $white);
-  .card {
+  .bg-card {
     @include cardStyle;
     display: flex;
-    .col-1 {
+    .bg-col-1 {
       @include flex(column, nowrap, flex-start, flex-start);
       width: 40%;
       padding: $paddingMd;
       background: linear-gradient(
         180deg,
-        rgba(137, 28, 253, 0.7),
-        rgba(137, 28, 253, 0.5),
-        rgba(137, 28, 253, 0.2)
+        rgb(65, 64, 64),
+        rgb(90, 90, 90),
+        rgb(120, 120, 120)
       );
       border-radius: 0.25rem;
       box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
@@ -33,22 +34,23 @@
         padding-right: 0.25rem;
         filter: invert(1) drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
       }
-      .card__name {
-        font-size: 1.25em;
-        font-weight: 600;
-        margin: $md 0;
-      }
       .card__date {
         @include flex;
         margin-bottom: 0.25rem;
         font-size: 1em;
       }
     }
-    .col-2 {
+    .bg-col-2 {
       width: 60%;
       padding: $paddingMd;
       border-radius: 0.25rem;
       color: $black;
+      @include flex(column, nowrap, flex-start);
+      gap: .2rem;
+      .card__text {
+        text-wrap: balance;
+        @include font('', .95em,$black);
+      }
     }
   }
 }

@@ -1,6 +1,9 @@
-.background {
-  display: block;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+#gradient-canvas {
+  width:100vw !important;
+  height:100vh !important;
+  --gradient-color-1: #0b0b0b;
+  --gradient-color-2: #A732FF;
+  --gradient-color-3: #5A1C8A;
+  --gradient-color-4: #3F1361;
+  --gradient-color-5: #000000;
 }

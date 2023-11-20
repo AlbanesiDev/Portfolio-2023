@@ -7,6 +7,7 @@
   scroll-snap-align: start;
   height: 100vh;
   width: 100%;
+  z-index: 10;
   .card {
     @include cardStyle;
     .card__image {
@@ -79,9 +80,10 @@
       }
     }
     .card__name {
-      @include font("", 2em, $white);
+      @include font("logotype-light", 2em, $white);
       @include positionAbsolute(70%, 50%);
       transform: translate(50%, 50%);
+      white-space: nowrap;
     }
   }
 }

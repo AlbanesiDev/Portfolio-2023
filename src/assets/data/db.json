@@ -5,30 +5,149 @@
       "name": "Joaquin Albanesi",
       "location": "Buenos Aires, Argentina",
       "time": "18:30 (GMT-3)",
-      "description": "Soy un desarrollador frontend ambicioso y autodidacta, tengo 21 años con una gran pasion por la tecnologia, el diseño y el desarrollo web. Llevo programando aproximadamente hace un año y aunque no tengo experiencia laboral directa, he trabajado en proyectos personales para fortalecer mi conjunto de habilidades. Soy competente en la creacion de interfaces de usuario y en la implementacion de funciones modernas. Dispuesto a aprender y colaborar en entornos y configuraciones en constante cambio."
+      "description": [
+        {
+          "paragraph_1": "Soy un desarrollador Front End especializado en Angular, competente en la creación de interfaces, llevando un enfoque “Pixel Perfect” garantizando que cada elemento de diseño sea preciso y estéticamente agradable."
+        },
+        {
+          "paragraph_2": "Aunque aún no cuento con experiencia laboral formal, he dedicado tiempo a desarrollar proyectos personales. Mi pasión por aprender y crecer constantemente me motiva a mantenerme al día con las últimas tendencias en desarrollo web y a mejorar mis habilidades de manera continua."
+        },
+        {
+          "paragraph_3": "Me considero un gran autodidacta y disfruto enfrentando desafíos, resolviendo problemas y explorando nuevas tecnologías. Mi objetivo es seguir avanzando en mi carrera como desarrollador Front-end y contribuir a proyectos que destaquen por su calidad y usabilidad."
+        }
+      ]
     }
   ],
   "works": [
     {
+      "id": 0,
       "title": "BeFaster",
-      "description": "",
-      "stack": {
-
-      }
+      "description": "Descripción del Proyecto - Befaster\n\nBefaster es una plataforma de comercio electrónico especializada en streetwear, desarrollada utilizando tecnologías de vanguardia como Angular, ASP.NET y SQL Server. Esta aplicación proporciona una experiencia integral tanto para los clientes como para los administradores, brindando un entorno robusto y altamente funcional.\n\nCaracterísticas Clave:\n\nÁrea del Cliente:\n\nExploración y Compra de Productos: Los usuarios pueden navegar y comprar una amplia variedad de productos de streetwear con una interfaz de usuario intuitiva y atractiva.\n\nInicio de Sesión y Perfil del Usuario: Los clientes pueden crear cuentas, iniciar sesión de manera segura y gestionar su perfil, lo que les permite almacenar información personal y acceder a su historial de compras.\n\nGestión de Favoritos: Los usuarios tienen la capacidad de guardar productos favoritos para futuras compras, mejorando así su experiencia de compra personalizada.\n\nÁrea del Administrador:\n\nPanel de Control Administrativo: Los administradores tienen acceso a un panel de control completo que les permite supervisar y gestionar todos los aspectos del negocio.\n\nGestión de Productos: Los administradores pueden agregar, eliminar y modificar productos de manera eficiente, incluyendo la actualización del inventario y precios.\n\nPersonalización de la Página de Inicio: Se permite la modificación del diseño y contenido de la página de inicio, lo que brinda flexibilidad para destacar productos y promociones clave.\n\nGestión de Pedidos: Los administradores pueden rastrear y gestionar el estado de los pedidos, desde el procesamiento hasta la entrega al cliente.\n\nEstadísticas Empresariales: La plataforma proporciona datos y estadísticas vitales sobre el rendimiento del negocio, permitiendo tomar decisiones informadas.\n\nBefaster no solo ofrece una experiencia de compra excepcional para los clientes, sino que también facilita la gestión eficiente y efectiva de la plataforma para los administradores. Con su tecnología de vanguardia y su conjunto completo de características, Befaster se posiciona como una solución integral en el mercado del streetwear, permitiendo un crecimiento y éxito continuo en el comercio electrónico.\n\nEsta versión resaltará los aspectos clave de tu proyecto de una manera más profesional y atractiva para posibles empleadores o colaboradores.",
+      "img": "/assets/images/befaster.png",
+      "code": "https://github.com/AlbanesiDev/BeFaster-Angular",
+      "deploy": "https://befaster-official.vercel.app",
+      "carousel": [
+        {
+          "img": "/assets/images/projects/befaster/1.png"
+        },
+        {
+          "img": "/assets/images/projects/befaster/1.png"
+        },
+        {
+          "img": "/assets/images/projects/befaster/1.png"
+        },
+        {
+          "img": "/assets/images/projects/befaster/1.png"
+        },
+        {
+          "img": "/assets/images/projects/befaster/1.png"
+        }
+      ],
+      "stack": [
+        {
+          "name": "Angular",
+          "path": "/assets/icons/skills/angular.svg"
+        },
+        {
+          "name": "NgRx",
+          "path": "/assets/icons/skills/ngrx.svg"
+        },
+        {
+          "name": "TypeScript",
+          "path": "/assets/icons/skills/square-ts.svg"
+        },
+        {
+          "name": "Bootstrap",
+          "path": "/assets/icons/skills/bootstrap.svg"
+        },
+        {
+          "name": "Scss",
+          "path": "/assets/icons/skills/sass.svg"
+        }
+      ]
     },
     {
+      "id": 1,
       "title": "Today's Weather",
-      "description": "",
-      "stack": {
-
-      }
+      "description": "...",
+      "img": "/assets/images/0.jpg",
+      "code": "https://github.com/AlbanesiDev/TodaysWeather",
+      "deploy": "https://todaysweather.vercel.app",
+      "carousel": [
+        {
+          "img": "/assets/images/projects/todays-weather/0.jpg"
+        },
+        {
+          "img": "/assets/images/projects/todays-weather/0.jpg"
+        },
+        {
+          "img": "/assets/images/projects/todays-weather/"
+        },
+        {
+          "img": "/assets/images/projects/todays-weather/"
+        },
+        {
+          "img": "/assets/images/projects/todays-weather/"
+        }
+      ],
+      "stack": [
+        {
+          "name": "Angular",
+          "path": "/assets/icons/skills/angular.svg"
+        },
+        {
+          "name": "TypeScript",
+          "path": "/assets/icons/skills/square-ts.svg"
+        },
+        {
+          "name": "Scss",
+          "path": "/assets/icons/skills/sass.svg"
+        }
+      ]
     },
     {
+      "id": 2,
       "title": "CodeCamp",
-      "description": "",
-      "stack": {
-
-      }
+      "description": "CodeCamp Dashboard es un aplicacion administrativa hecha con angular y ngrx",
+      "img": "/assets/images/codecamp.png",
+      "code": "https://github.com/AlbanesiDev/Dashboard",
+      "deploy": "https://codecamp-dashboard.vercel.app/",
+      "carousel": [
+        {
+          "img": "/assets/images/projects/codecamp/d-1.png"
+        },
+        {
+          "img": "/assets/images/projects/codecamp/d-2.png"
+        },
+        {
+          "img": "/assets/images/projects/codecamp/d-3.png"
+        },
+        {
+          "img": "/assets/images/projects/codecamp/d-4.png"
+        }
+      ],
+      "stack": [
+        {
+          "name": "Angular",
+          "path": "/assets/icons/skills/angular.svg"
+        },
+        {
+          "name": "NgRx",
+          "path": "/assets/icons/skills/ngrx.svg"
+        },
+        {
+          "name": "TypeScript",
+          "path": "/assets/icons/skills/square-ts.svg"
+        },
+        {
+          "name": "Bootstrap",
+          "path": "/assets/icons/skills/bootstrap.svg"
+        },
+        {
+          "name": "Scss",
+          "path": "/assets/icons/skills/sass.svg"
+        }
+      ]
     }
   ],
   "skill": [
@@ -50,7 +169,6 @@
       "icon": "/assets/icons/skills/bootstrap.svg",
       "url": "https://getbootstrap.com/"
     },
-
     {
       "name": "JavaScript",
       "color": "#f7df25cc",
@@ -83,13 +201,15 @@
     },
     {
       "name": "Node.js",
-      "color": "#87cf2fcc",
+      "color": "#323467cc",
       "icon": "/assets/icons/skills/node-js.svg",
       "url": "https://nodejs.org/es"
     }
   ],
   "contact": [
-    { "background": "/assets/images/city/BsAs.jpg" },
+    {
+      "background": "/assets/images/city/BsAs.jpg"
+    },
     {
       "links": [
         {
@@ -123,6 +243,44 @@
           "url": "https://twitter.com/AlbanesiDev"
         }
       ]
+    }
+  ],
+  "icons": [
+    {
+      "name": "HTML",
+      "path": "/assets/icons/skills/html5.svg"
+    },
+    {
+      "name": "CSS",
+      "path": "/assets/icons/skills/css3-alt.svg"
+    },
+    {
+      "name": "Bootstrap",
+      "path": "/assets/icons/skills/bootstrap.svg"
+    },
+    {
+      "name": "Javascript",
+      "path": "/assets/icons/skills/square-js.svg"
+    },
+    {
+      "name": "Typescript",
+      "path": "/assets/icons/skills/square-ts.svg"
+    },
+    {
+      "name": "scss",
+      "path": "/assets/icons/skills/sass.svg"
+    },
+    {
+      "name": "Angular",
+      "path": "/assets/icons/skills/angular.svg"
+    },
+    {
+      "name": "NgRx",
+      "path": "/assets/icons/skills/ngrx.svg"
+    },
+    {
+      "name": "Node.js",
+      "path": "/assets/icons/skills/node-js.svg"
     }
   ]
 }

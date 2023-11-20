@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataModel, Skill } from 'src/app/models/data.model';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
-  skillData: any[] = []
+  skillData: Skill[] = []
 
   constructor(
     private dataService: DataService,
@@ -18,7 +19,7 @@ export class SkillsComponent {
   }
 
   getData() {
-    this.dataService.getData().subscribe((data) => {
+    this.dataService.getData().subscribe((data: DataModel) => {
       this.skillData = data.skill;
     });
   }

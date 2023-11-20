@@ -1,0 +1,153 @@
+@import "/src/sass/abstract/mixins";
+@import "/src/sass/variables/variablesColor";
+@import "/src/sass/variables/variablesSpacing";
+
+.modal {
+  @include positionAbsolute(50%, 50%);
+  transform: translate(50%, -50%);
+  width: 90vw;
+  height: 80vh;
+  background-color: $white;
+  border-radius: 0.5rem;
+  padding: $paddingMd;
+  display: none;
+  z-index: 2;
+}
+.modal.open {
+  display: block;
+}
+.modal__container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 1rem 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 1.5fr 0.5fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header"
+    "main-image description"
+    "carousel-image btn";
+}
+.modal__header {
+  @include flex(row, nowrap, space-between);
+  grid-area: header;
+  width: 100%;
+  height: 56px;
+  padding: $paddingSm;
+  .modal__title {
+    @include font("logotype", 2em, $black);
+  }
+  .modal__close {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    border-radius: $borderRadiusSm;
+    padding: 0;
+    svg {
+      width: 100%;
+      height: 100%;
+      transition: all 0.25s;
+      &:hover {
+        fill: rgb(230, 22, 22);
+      }
+    }
+  }
+}
+.modal__main-image {
+  width: 100%;
+  height: 100%;
+  grid-area: main-image;
+  overflow: hidden;
+  background-color: $white;
+  owl-carousel-o {
+    height: 100% !important;
+  }
+  .main-image-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: calc(1080 / 1920 * 100%); /* Maintain 16:9 aspect ratio */
+    position: relative;
+    .main-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Maintain aspect ratio and cover the container */
+      position: absolute; /* Add this */
+      top: 0; /* Add this */
+      left: 0; /* Add this */
+    }
+  }
+}
+.modal__description {
+  width: 100%;
+  height: 100%;
+  grid-area: description;
+  @include font("", 1.25em, $black);
+  overflow: scroll;
+  .tech__stack {
+    @include flex;
+    margin-top: 2rem;
+    gap: 0 2rem;
+    img {
+      width: 8%;
+      opacity: 90%;
+    }
+  }
+}
+.modal__carousel-image {
+  height: 100%;
+  grid-area: carousel-image;
+  background-color: $white;
+  overflow: hidden;
+  cursor: grab;
+  .projects-gallery__carousel-img {
+    filter: brightness(0.5);
+  }
+  .product-gallery__carousel-item--active {
+    filter: brightness(1);
+  }
+}
+.modal__btn {
+  @include flex;
+  grid-area: btn;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  border-radius: $borderRadiusSm;
+  .btn__code {
+    background-color: #111111;
+    margin-right: 2rem;
+    &:hover {
+      background-color: #212121;
+    }
+  }
+  .btn__deploy {
+    background-color: #441aa6;
+    &:hover {
+      background-color: #5a33b5;
+    }
+  }
+  .btn__code,
+  .btn__deploy {
+    @include font("", 1.15em, $white);
+    position: relative;
+    width: 200px;
+    height: 40px;
+    border: 0;
+    border-radius: 4px;
+    padding-left: 1rem;
+    cursor: pointer;
+    &:active {
+      border: 2px solid rgb(255, 255, 255);
+      box-shadow: 0 0 2px black;
+    }
+    svg {
+      @include positionAbsolute(50%, auto, auto 50%);
+      transform: translate(-190%, -50%);
+      width: 24px;
+    }
+    &-link {
+      color: $white;
+    }
+  }
+}

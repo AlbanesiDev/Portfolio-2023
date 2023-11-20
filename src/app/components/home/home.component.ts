@@ -1,6 +1,7 @@
 import {
   Component,
   ElementRef,
+  HostListener,
   NgZone,
   OnInit,
   ViewChild,
@@ -19,28 +20,36 @@ export class HomeComponent implements OnInit {
   private isMouseDown = false;
   private previousMouseX = 0;
   private previousMouseY = 0;
-  private cameraDistance = 10;
   private scene!: THREE.Scene;
   private camera!: THREE.PerspectiveCamera;
   private renderer!: THREE.WebGLRenderer;
   private keyboard!: THREE.Group;
 
-  constructor(private ngZone: NgZone) {}
+  constructor(
+    private ngZone: NgZone,
+  ) {
+  }
 
   ngOnInit() {
     this.initScene();
+    this.addResizeListener();
     this.addResizeListener();
     this.addMouseListeners();
     this.loadKeyboardModel(() => {
       this.animate();
     });
   }
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.updateCameraPosition();
+    this.renderer.setSize(window.innerWidth, window.innerHeight);
+  }
 
   initScene() {
     const aspect = window.innerWidth / window.innerHeight;
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(2, aspect, 0.1, 1000);
-    this.camera.position.set(0, 5, 5);
+    this.updateCameraPosition();
     this.camera.lookAt(0, 0, 0.03);
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
@@ -51,6 +60,17 @@ export class HomeComponent implements OnInit {
     this.scene.add(ambientLight, directionalLight);
   }
 
+  updateCameraPosition() {
+    if (window.innerWidth > 890) {
+      this.camera.position.set(0, 5, 5);
+    } else if (window.innerWidth >= 620) {
+      this.camera.position.set(0, 8, 5);
+    } else {
+      this.camera.position.set(0, 11, 5);
+    }
+    this.camera.lookAt(0, 0, 0.03);
+  }
+
   loadKeyboardModel(callback: () => void) {
     const loader = new GLTFLoader();
     loader.load('assets/three-js/keyboard.glb', (gltf) => {
@@ -59,7 +79,6 @@ export class HomeComponent implements OnInit {
       callback();
     });
   }
-
 
   addMouseListeners() {
     this.canvasRef.nativeElement.addEventListener(
@@ -111,6 +130,7 @@ export class HomeComponent implements OnInit {
       }
     });
   }
+
   animate() {
     this.ngZone.runOutsideAngular(() => {
       let rotationDirection = 1;

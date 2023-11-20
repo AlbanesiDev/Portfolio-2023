@@ -1,15 +1,16 @@
-@import 'sass/variables/variablesColor';
-@import 'sass/variables/variablesFont';
-@import 'sass/variables/variablesSpacing';
-@import 'sass/base/reset';
-@import 'sass/base/typography';
-@import 'sass/abstract/mixins';
+@import "sass/variables/variablesColor";
+@import "sass/variables/variablesFont";
+@import "sass/variables/variablesSpacing";
+@import "sass/base/reset";
+@import "sass/base/typography";
+@import "sass/abstract/mixins";
 
 html,
 body {
+  position: relative;
   height: 500vh;
   overflow: hidden;
   ::-webkit-scrollbar {
     display: none;
-}
+  }
 }

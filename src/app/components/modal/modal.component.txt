@@ -1,0 +1,76 @@
+import { Component, OnDestroy, OnInit, AfterViewInit, EventEmitter, Output } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Carousel, DataModel, Icon } from 'src/app/models/data.model';
+import { DataService } from 'src/app/services/data.service';
+import { ModalService } from 'src/app/services/modal.service';
+
+@Component({
+  selector: 'app-modal',
+  templateUrl: './modal.component.html',
+  styleUrls: ['./modal.component.scss'],
+})
+export class ModalComponent implements OnInit, OnDestroy {
+  modalDisplay: string = 'none';
+  imageSize = 430;
+  title!: string;
+  description!: string;
+  carousel: Carousel[] = [];
+  linkDeploy!: string;
+  linkCode!: string;
+  stackImg: any[] = [];
+  stack: any[] = [];
+  isOpenSubscription: Subscription;
+  selectedImage!: string;
+  modalOpen: boolean = false;
+  selectedId!: number;
+
+  constructor(
+    private modalService: ModalService,
+    private dataService: DataService
+  ) {
+    this.isOpenSubscription = this.modalService.isOpen$.subscribe((isOpen) => {
+      if (isOpen) {
+        this.openModal();
+      } else {
+        this.closeModal();
+      }
+    });
+  }
+
+  ngOnInit(): void {
+    this.getData(0);
+    this.modalService.getSelectedId().subscribe((id) => {
+      this.selectedId = id;
+      this.getData(this.selectedId);
+    });
+  }
+
+  ngOnDestroy() {
+    this.isOpenSubscription.unsubscribe();
+  }
+
+  getData(id: number) {
+    this.dataService.getData().subscribe((data: DataModel) => {
+      const selectedWork = data.works.find((work) => work.id === id);
+      if (selectedWork) {
+        this.title = selectedWork.title;
+        this.carousel = selectedWork.carousel;
+        this.linkCode = selectedWork.code;
+        this.linkDeploy = selectedWork.deploy;
+        this.description = selectedWork.description;
+        this.stack = selectedWork.stack;
+        this.getMatchIcons();
+      }
+      this.stackImg = data.icons;
+    });
+  }
+  openModal() {
+    this.modalOpen = true;
+  }
+  closeModal() {
+    this.modalOpen = false;
+  }
+  changeimage(image: string) {
+    this.selectedImage = image;
+  }
+}

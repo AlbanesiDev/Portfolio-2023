@@ -1,12 +1,16 @@
-<div class="container" (contextmenu)="onContextMenu($event)">
+<div class="bg-container" (contextmenu)="onContextMenu($event)">
   <div class="app-header">
     <app-header></app-header>
-    <app-background class="app-background"></app-background>
   </div>
   <app-home class="app-area" id="home"></app-home>
-  <app-about-me class="app-area" id="about-me"></app-about-me>
-  <app-works class="app-area" id="works"></app-works>
-  <app-skills class="app-area" id="skills"></app-skills>
-  <app-contact class="app-area" id="contact"></app-contact>
+  <div class="padding">
+    <app-about-me class="app-area" id="about-me"></app-about-me>
+    <div class="app-work">
+      <app-works class="app-area" id="works"></app-works>
+      <app-modal></app-modal>
+    </div>
+    <app-skills class="app-area" id="skills"></app-skills>
+    <app-contact class="app-area" id="contact"></app-contact>
+  </div>
 </div>
-
+<app-background class="app-background"></app-background>
