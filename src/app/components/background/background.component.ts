@@ -1,5 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
-import { Gradient } from 'whatamesh';
+import { Gradient } from 'src/assets/three-js/lib';
 
 @Component({
   selector: 'app-background',
