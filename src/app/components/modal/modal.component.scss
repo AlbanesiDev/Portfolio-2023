@@ -36,7 +36,7 @@
   height: 56px;
   padding: $paddingSm;
   .modal__title {
-    @include font("logotype", 2em, $black);
+    @include font($font-modal-title, "logotype", $black);
   }
   .modal__close {
     width: 40px;
@@ -83,7 +83,7 @@
   width: 100%;
   height: 100%;
   grid-area: description;
-  @include font("", 1.25em, $black);
+  @include font($font-modal-title, "", $black);
   overflow: scroll;
   .tech__stack {
     @include flex;
@@ -129,7 +129,7 @@
   }
   .btn__code,
   .btn__deploy {
-    @include font("", 1.15em, $white);
+    @include font($font-modal-title);
     position: relative;
     width: 200px;
     height: 40px;
