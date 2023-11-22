@@ -4,20 +4,16 @@ $gray: #adb5bd;
 $light-gray: #dee2e6;
 $white: #ffffff;
 
-// Colores de marca
-$primary-color: #d3252b; // Rojo
-$secondary-color: #6c757d; // Gris
-$success-color: #28a745; // Verde
-$info-color: #17a2b8; // Azul claro
-$warning-color: #ffc107; // Amarillo
-$danger-color: #dc3545; // Rojo
+$primary-color: #d3252b;
 
-// Colores adicionales
-$hover-dark: #414141;
-$link-color: #007bff; // Color predeterminado para enlaces
-$body-bg-color: #fff; // Color de fondo del cuerpo
-$body-color: #333; // Color de texto principal
-$border-color: #ddd; // Color de borde predeterminado
+$hover-link: #ffffff26;
+$background-header: #00000026;
+$background-gradient-tr: linear-gradient(
+  0deg,
+  rgba(0, 0, 0, 0.85),
+  rgba(0, 0, 0, 0.25),
+  rgba(0, 0, 0, 0.15),
+  rgba(0, 0, 0, 0)
+);
 
-$backgroundFooter: #000000;
-
+$blur: 10px;

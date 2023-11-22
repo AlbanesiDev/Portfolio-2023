@@ -1,56 +1,45 @@
 @import "/src/sass/abstract/mixins";
-@import "/src/sass/variables/variablesColor";
-@import "/src/sass/variables/variablesSpacing";
 
-.about-me {
-  position: relative;
-  scroll-snap-align: start;
-  height: 100vh;
-  width: 100%;
-  z-index: 10;
-  @include font("", 1.25em, $white);
-  .bg-card {
-    @include cardStyle;
-    display: flex;
-    .bg-col-1 {
-      @include flex(column, nowrap, flex-start, flex-start);
-      width: 40%;
-      padding: $paddingMd;
-      background: linear-gradient(
-        180deg,
-        rgb(65, 64, 64),
-        rgb(90, 90, 90),
-        rgb(120, 120, 120)
-      );
-      border-radius: 0.25rem;
-      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
-      text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-      .card__img {
-        border-radius: 0.25rem;
-        border: 5px solid rgba(0, 0, 0, 0.4);
-      }
-      svg {
-        width: 1.5em;
-        padding-right: 0.25rem;
-        filter: invert(1) drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
-      }
-      .card__date {
-        @include flex;
-        margin-bottom: 0.25rem;
-        font-size: 1em;
-      }
+.card__styles {
+  display: flex;
+  overflow: hidden;
+  .col__1 {
+    @include flex(column, nowrap, flex-start, flex-start);
+    border-radius: $borderRadiusSm 0 0 $borderRadiusSm;
+    box-shadow: 0 0 0 8px $white;
+    gap: $sm;
+    width: 40%;
+    padding: $paddingMd;
+    background: $background-gradient-tr;
+    .card__img {
+      border: 4px solid $white;
+      margin-bottom: $marginMd;
     }
-    .bg-col-2 {
-      width: 60%;
-      padding: $paddingMd;
-      border-radius: 0.25rem;
-      color: $black;
-      @include flex(column, nowrap, flex-start);
-      gap: .2rem;
-      .card__text {
-        text-wrap: balance;
-        @include font('', .95em,$black);
-      }
+    svg {
+      width: 1rem;
+      fill: $white;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 4px;
+    }
+    h2 {
+      @include font($font-card-about, "sans-serif");
+      white-space: nowrap;
+      margin-bottom: $marginXs;
+      margin-left: $marginSm;
+    }
+  }
+  .col__2 {
+    @include flex(column, nowrap, flex-start);
+    width: 60%;
+    box-shadow: 1px 0 0 $white;
+    padding: $paddingMd;
+    background-color: $white;
+    overflow: auto;
+    gap: 0.15rem;
+    .card__text {
+      @include font($font-card-about-description, "sans-serif", $black);
+      text-wrap: balance;
     }
   }
 }

@@ -6,17 +6,17 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  isMenuOpen: boolean = true;
+  public isMenuOpen: boolean = true;
 
   constructor() {
     this.checkScreenWidth();
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(): void {
+  onResize() {
     this.checkScreenWidth();
   }
-  private checkScreenWidth(): void {
+  private checkScreenWidth() {
     if (window.innerWidth < 1101) {
       this.isMenuOpen = false;
     } else {
@@ -32,7 +32,7 @@ export class HeaderComponent {
     if (window.innerWidth < 1101) {
       setTimeout(() => {
         this.isMenuOpen = false;
-      }, 840);
+      }, 700);
     } else {
       this.isMenuOpen = true;
     }

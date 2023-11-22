@@ -20,27 +20,27 @@
   ],
   "works": [
     {
-      "id": 0,
-      "title": "BeFaster",
-      "description": "Descripción del Proyecto - Befaster\n\nBefaster es una plataforma de comercio electrónico especializada en streetwear, desarrollada utilizando tecnologías de vanguardia como Angular, ASP.NET y SQL Server. Esta aplicación proporciona una experiencia integral tanto para los clientes como para los administradores, brindando un entorno robusto y altamente funcional.\n\nCaracterísticas Clave:\n\nÁrea del Cliente:\n\nExploración y Compra de Productos: Los usuarios pueden navegar y comprar una amplia variedad de productos de streetwear con una interfaz de usuario intuitiva y atractiva.\n\nInicio de Sesión y Perfil del Usuario: Los clientes pueden crear cuentas, iniciar sesión de manera segura y gestionar su perfil, lo que les permite almacenar información personal y acceder a su historial de compras.\n\nGestión de Favoritos: Los usuarios tienen la capacidad de guardar productos favoritos para futuras compras, mejorando así su experiencia de compra personalizada.\n\nÁrea del Administrador:\n\nPanel de Control Administrativo: Los administradores tienen acceso a un panel de control completo que les permite supervisar y gestionar todos los aspectos del negocio.\n\nGestión de Productos: Los administradores pueden agregar, eliminar y modificar productos de manera eficiente, incluyendo la actualización del inventario y precios.\n\nPersonalización de la Página de Inicio: Se permite la modificación del diseño y contenido de la página de inicio, lo que brinda flexibilidad para destacar productos y promociones clave.\n\nGestión de Pedidos: Los administradores pueden rastrear y gestionar el estado de los pedidos, desde el procesamiento hasta la entrega al cliente.\n\nEstadísticas Empresariales: La plataforma proporciona datos y estadísticas vitales sobre el rendimiento del negocio, permitiendo tomar decisiones informadas.\n\nBefaster no solo ofrece una experiencia de compra excepcional para los clientes, sino que también facilita la gestión eficiente y efectiva de la plataforma para los administradores. Con su tecnología de vanguardia y su conjunto completo de características, Befaster se posiciona como una solución integral en el mercado del streetwear, permitiendo un crecimiento y éxito continuo en el comercio electrónico.\n\nEsta versión resaltará los aspectos clave de tu proyecto de una manera más profesional y atractiva para posibles empleadores o colaboradores.",
-      "img": "/assets/images/befaster.png",
-      "code": "https://github.com/AlbanesiDev/BeFaster-Angular",
-      "deploy": "https://befaster-official.vercel.app",
+      "id": 1,
+      "title": "Apple Store",
+      "description": "...",
+      "img": "/assets/images/0.jpg",
+      "code": "https://github.com/AlbanesiDev/Apple-store",
+      "deploy": "https://apple-store.vercel.app",
       "carousel": [
         {
-          "img": "/assets/images/projects/befaster/1.png"
+          "img": "/assets/images/projects/apple-store/"
         },
         {
-          "img": "/assets/images/projects/befaster/1.png"
+          "img": "/assets/images/projects/apple-store/"
         },
         {
-          "img": "/assets/images/projects/befaster/1.png"
+          "img": "/assets/images/projects/apple-store/"
         },
         {
-          "img": "/assets/images/projects/befaster/1.png"
+          "img": "/assets/images/projects/apple-store/"
         },
         {
-          "img": "/assets/images/projects/befaster/1.png"
+          "img": "/assets/images/projects/apple-store/"
         }
       ],
       "stack": [
@@ -49,16 +49,8 @@
           "path": "/assets/icons/skills/angular.svg"
         },
         {
-          "name": "NgRx",
-          "path": "/assets/icons/skills/ngrx.svg"
-        },
-        {
           "name": "TypeScript",
           "path": "/assets/icons/skills/square-ts.svg"
-        },
-        {
-          "name": "Bootstrap",
-          "path": "/assets/icons/skills/bootstrap.svg"
         },
         {
           "name": "Scss",
@@ -98,6 +90,53 @@
         {
           "name": "TypeScript",
           "path": "/assets/icons/skills/square-ts.svg"
+        },
+        {
+          "name": "Scss",
+          "path": "/assets/icons/skills/sass.svg"
+        }
+      ]
+    },
+    {
+      "id": 0,
+      "title": "BeFaster",
+      "description": "Descripción del Proyecto - Befaster\n\nBefaster es una plataforma de comercio electrónico especializada en streetwear, desarrollada utilizando tecnologías de vanguardia como Angular, ASP.NET y SQL Server. Esta aplicación proporciona una experiencia integral tanto para los clientes como para los administradores, brindando un entorno robusto y altamente funcional.\n\nCaracterísticas Clave:\n\nÁrea del Cliente:\n\nExploración y Compra de Productos: Los usuarios pueden navegar y comprar una amplia variedad de productos de streetwear con una interfaz de usuario intuitiva y atractiva.\n\nInicio de Sesión y Perfil del Usuario: Los clientes pueden crear cuentas, iniciar sesión de manera segura y gestionar su perfil, lo que les permite almacenar información personal y acceder a su historial de compras.\n\nGestión de Favoritos: Los usuarios tienen la capacidad de guardar productos favoritos para futuras compras, mejorando así su experiencia de compra personalizada.\n\nÁrea del Administrador:\n\nPanel de Control Administrativo: Los administradores tienen acceso a un panel de control completo que les permite supervisar y gestionar todos los aspectos del negocio.\n\nGestión de Productos: Los administradores pueden agregar, eliminar y modificar productos de manera eficiente, incluyendo la actualización del inventario y precios.\n\nPersonalización de la Página de Inicio: Se permite la modificación del diseño y contenido de la página de inicio, lo que brinda flexibilidad para destacar productos y promociones clave.\n\nGestión de Pedidos: Los administradores pueden rastrear y gestionar el estado de los pedidos, desde el procesamiento hasta la entrega al cliente.\n\nEstadísticas Empresariales: La plataforma proporciona datos y estadísticas vitales sobre el rendimiento del negocio, permitiendo tomar decisiones informadas.\n\nBefaster no solo ofrece una experiencia de compra excepcional para los clientes, sino que también facilita la gestión eficiente y efectiva de la plataforma para los administradores. Con su tecnología de vanguardia y su conjunto completo de características, Befaster se posiciona como una solución integral en el mercado del streetwear, permitiendo un crecimiento y éxito continuo en el comercio electrónico.\n\nEsta versión resaltará los aspectos clave de tu proyecto de una manera más profesional y atractiva para posibles empleadores o colaboradores.",
+      "img": "/assets/images/befaster.png",
+      "code": "https://github.com/AlbanesiDev/BeFaster-Angular",
+      "deploy": "https://befaster-official.vercel.app",
+      "carousel": [
+        {
+          "img": "/assets/images/projects/befaster/1.png"
+        },
+        {
+          "img": "/assets/images/projects/befaster/1.png"
+        },
+        {
+          "img": "/assets/images/projects/befaster/1.png"
+        },
+        {
+          "img": "/assets/images/projects/befaster/1.png"
+        },
+        {
+          "img": "/assets/images/projects/befaster/1.png"
+        }
+      ],
+      "stack": [
+        {
+          "name": "Angular",
+          "path": "/assets/icons/skills/angular.svg"
+        },
+        {
+          "name": "NgRx",
+          "path": "/assets/icons/skills/ngrx.svg"
+        },
+        {
+          "name": "TypeScript",
+          "path": "/assets/icons/skills/square-ts.svg"
+        },
+        {
+          "name": "Bootstrap",
+          "path": "/assets/icons/skills/bootstrap.svg"
         },
         {
           "name": "Scss",

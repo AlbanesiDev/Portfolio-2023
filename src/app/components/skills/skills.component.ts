@@ -8,7 +8,7 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
-  skillData: Skill[] = []
+  public skillData: Skill[] = []
 
   constructor(
     private dataService: DataService,

@@ -1,28 +1,26 @@
 @import "/src/sass/abstract/mixins";
-@import "/src/sass/variables/variablesColor";
-@import "/src/sass/variables/variablesSpacing";
 
 .header {
   width: 100%;
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur($blur);
   .nav__button {
     background-color: transparent;
     border: 0;
-    margin-top: 8px;
-    border-radius: 0.25rem;
+    border-radius: $borderRadiusXs;
+    margin-top: $marginSm;
     &:hover {
       background-color: rgba(255, 255, 255, 0.15);
     }
   }
   .nav__item {
-    border-radius: 0.25rem;
+    border-radius: $borderRadiusXs;
     .nav__link {
-      @include font("logotype-medium", 1.25em, $white);
+      @include font($font-header, "logotype-medium");
       white-space: nowrap;
+      border-radius: $borderRadiusXs;
       padding: 8px 16px;
-      border-radius: 0.25rem;
       &:hover {
-        background-color: rgba(255, 255, 255, 0.15);
+        background-color: $hover-link;
       }
     }
   }
@@ -32,14 +30,17 @@
 @media (max-width: 1100px) {
   .header {
     @include flex(column);
-    min-height: 50px;
-    background-color: rgba(0, 0, 0, 0.35);
     position: relative;
+    min-height: 50px;
+    background-color: $background-header;
+    .nav__button {
+      margin-bottom: $marginSm;
+    }
     .nav__list {
-      padding: 1rem 0;
-      animation: fadeIn .4s ease-in-out;
+      padding: $paddingMd 0;
+      animation: fadeIn 0.4s ease-in-out;
       &.hidden {
-        animation: fadeOut .4s ease-in-out;
+        animation: fadeOut 0.4s ease-in-out;
       }
       z-index: 1;
       @include flex(column);
@@ -50,7 +51,7 @@
   }
   .nav__item {
     @include flex(column);
-    padding: 8px;
+    padding: $paddingSm;
   }
 }
 // Desktop version
@@ -68,7 +69,7 @@
     display: none;
   }
   .nav__item {
-    padding: 16px;
+    padding: $paddingMd;
   }
 }
 // Nav active
@@ -136,7 +137,8 @@ $stroke-dasharray-middle: 40 111;
 }
 .line {
   fill: none;
-  transition: stroke-dasharray $transition-duration,
+  transition:
+    stroke-dasharray $transition-duration,
     stroke-dashoffset $transition-duration;
   stroke: $white;
   stroke-width: 5;

@@ -1,0 +1,54 @@
+.card__container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+  z-index: 10;
+}
+.card__styles {
+  @include positionAbsolute(50%, 50%);
+  background-color: transparent;
+  border-radius: $borderRadiusMd;
+  transition: width 0.25s;
+  transform: translate(50%, -50%);
+  .card__title-container {
+    @include flex(row, nowrap, flex-start);
+    @include positionAbsolute(175px, -235px);
+    height: 50px;
+    width: 400px;
+    transform: rotate(90deg);
+    .card__title {
+      @include font($font-card-title, "logotype-medium", $white);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
+}
+@include mediaQuery("mobile") {
+  .card__styles {
+    width: 100%;
+    height: 45vh;
+    border: 8px solid $white;
+    .card__title-container {
+      @include flex(row, nowrap, flex-start);
+      @include positionAbsolute(-60px, 50%);
+      transform: translate(50%, 8px);
+      width: 100%;
+      height: 50px;
+    }
+  }
+}
+@include mediaQuery("tablet") {
+  .card__styles {
+    width: 550px;
+    height: 550px;
+    border: 16px solid $white;
+  }
+}
+@include mediaQuery("desktop") {
+  .card__styles {
+    width: 750px;
+    height: 550px;
+    border: 16px solid $white;
+  }
+}

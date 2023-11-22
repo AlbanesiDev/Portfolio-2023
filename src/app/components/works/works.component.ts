@@ -9,7 +9,7 @@ import { DataModel, Work } from 'src/app/models/data.model';
   styleUrls: ['./works.component.scss'],
 })
 export class WorksComponent {
-  dataProjects: Work[] = [];
+  public dataProjects: Work[] = [];
 
   constructor(
     private modalService: ModalService,

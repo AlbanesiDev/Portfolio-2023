@@ -25,10 +25,7 @@ export class HomeComponent implements OnInit {
   private renderer!: THREE.WebGLRenderer;
   private keyboard!: THREE.Group;
 
-  constructor(
-    private ngZone: NgZone,
-  ) {
-  }
+  constructor(private ngZone: NgZone) {}
 
   ngOnInit() {
     this.initScene();
@@ -133,18 +130,23 @@ export class HomeComponent implements OnInit {
 
   animate() {
     this.ngZone.runOutsideAngular(() => {
-      let rotationDirection = 1;
-      const rotationSpeed = 0.001;
+      let rotationDirectionY = 1;
+      let rotationDirectionX = -1;
+      const rotationSpeedY = 0.002;
+      const rotationSpeedX = 0.001;
       const animateFn = () => {
         requestAnimationFrame(animateFn);
 
         if (this.keyboard) {
-          this.keyboard.rotation.y += rotationDirection * rotationSpeed;
+          this.keyboard.rotation.y += rotationDirectionY * rotationSpeedY;
+          this.keyboard.rotation.x += rotationDirectionX * rotationSpeedX;
         }
         if (Math.abs(this.keyboard.rotation.y) >= Math.PI / 4) {
-          rotationDirection *= -1;
+          rotationDirectionY *= -1;
         }
-
+        if (Math.abs(this.keyboard.rotation.y) >= Math.PI / 4) {
+          rotationDirectionX *= -1;
+        }
         this.renderer.render(this.scene, this.camera);
       };
       animateFn();

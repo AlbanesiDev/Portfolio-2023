@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
+import * as moment from 'moment-timezone';
 
 @Component({
   selector: 'app-about-me',
@@ -7,12 +8,15 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent {
-
-  aboutMe: any[] = [];
+  public currentTime!: string;
+  public aboutMe: any[] = [];
 
   constructor (
     private dataService: DataService,
-  ){}
+  ){
+    const argentinaTime = moment().tz('America/Argentina/Buenos_Aires');
+    this.currentTime = argentinaTime.format('HH:mm');
+  }
 
   ngOnInit(){
     this.dataService.getData().subscribe((data) => {

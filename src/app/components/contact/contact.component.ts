@@ -8,8 +8,8 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  links: any[] = [];
-  background: string | undefined;
+  public links: any[] = [];
+  public background: string | undefined;
 
   constructor(private dataService: DataService) {}
 
@@ -19,13 +19,8 @@ export class ContactComponent implements OnInit {
 
   getDataContact() {
     this.dataService.getData().subscribe((data: DataModel) => {
-        if (data.contact[1]?.links) {
           this.links = data.contact[1].links;
           this.background = data.contact[0].background;
-        }
-      },
-      (error) => {
-        console.error('Error al obtener los datos:', error);
       }
     );
   }
