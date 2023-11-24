@@ -44,7 +44,7 @@
           opacity: 0;
         }
         &-name {
-          @include font($font-works-title, "logotype-medium" );
+          @include font($font-works-title, "logotype-medium");
           @include positionAbsolute(auto, auto, 40px, 16px);
           text-transform: capitalize;
           background-color: rgba(0, 0, 0, 0.95);
@@ -63,6 +63,15 @@
           }
         }
       }
+    }
+  }
+}
+
+@include mediaQuery("mobile") {
+  .work__container-overflow {
+    gap: $sm 0 !important;
+    .card__works {
+      height: 300px !important;
     }
   }
 }

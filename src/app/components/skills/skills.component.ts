@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataModel, Skill } from 'src/app/models/data.model';
 import { DataService } from 'src/app/services/data.service';
 
@@ -7,7 +7,7 @@ import { DataService } from 'src/app/services/data.service';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent {
+export class SkillsComponent implements OnInit {
   public skillData: Skill[] = []
 
   constructor(

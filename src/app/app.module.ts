@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { ModalService } from './services/modal.service';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http'
@@ -14,6 +15,10 @@ import { BackgroundComponent } from './components/background/background.componen
 import { RouterModule } from '@angular/router';
 import { ModalComponent } from './components/modal/modal.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { modalDirective } from './components/modal/modal.directive';
+import { DataService } from './services/data.service';
+import { NavbarService } from './services/navbar.service';
+import { SkillsTiltDirective } from './components/skills/skills-tilt.directive';
 
 @NgModule({
   declarations: [
@@ -22,10 +27,12 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     AboutMeComponent,
     WorksComponent,
     SkillsComponent,
+    SkillsTiltDirective,
     ContactComponent,
     HomeComponent,
     BackgroundComponent,
     ModalComponent,
+    modalDirective
   ],
   imports: [
     BrowserModule,
@@ -35,7 +42,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     RouterModule,
     CarouselModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [DataService, ModalService, NavbarService],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

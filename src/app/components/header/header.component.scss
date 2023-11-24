@@ -32,7 +32,11 @@
     @include flex(column);
     position: relative;
     min-height: 50px;
-    background-color: $background-header;
+    transition: background-color .3s ease;
+    background: $background-header;
+    &.active {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
     .nav__button {
       margin-bottom: $marginSm;
     }

@@ -8,20 +8,24 @@
   .card__skill {
     @include flex(column, nowrap, space-evenly, center);
     border-radius: $borderRadiusXs;
-    transition: all 0.25s ease;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
+    perspective: 1000px;
+    perspective-origin: center center;
+    transform-style: preserve-3d;
     cursor: pointer;
     &:hover {
       will-change: transform;
-      transform: scale(0.95);
     }
     &-img {
       width: 25%;
+      transform: translateZ(40px);
       filter: invert(1) drop-shadow(0 0 10px rgba(0, 0, 0, 0.15));
     }
-    &-name {
-      @include font($font-skill, "sans-serif");
-      text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    }
+  }
+}
+
+@include mediaQuery("mobile") {
+  .card__styles {
+    gap: $sm;
   }
 }

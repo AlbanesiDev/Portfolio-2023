@@ -1,13 +1,8 @@
 @import "/src/sass/abstract/mixins";
-@import "/src/sass/variables/variablesColor";
-@import "/src/sass/variables/variablesSpacing";
 
 .card__styles {
   background-color: transparent;
-  .card__image {
-    @include positionAbsolute(0, 0);
-    height: 100%;
-  }
+  @include flex;
   .gradient {
     @include positionAbsolute(0, 0);
     width: 100%;
@@ -15,52 +10,45 @@
     background: $background-gradient-tr;
   }
   .card__contact {
-    width: 100%;
+    @include flex(row, nowrap);
+    gap: $md;
+    width: 50%;
     height: 100%;
-    .card__nav {
-      @include positionAbsolute(40%, 50%);
-      transform: translate(50%, 50%);
-      .nav__list {
-        @include flex;
-        .nav__item {
-          margin: 0 $sm;
-          .nav__link {
-            position: relative;
-            img {
-              filter: invert(1) drop-shadow(0 0 10px rgba(0, 0, 0, 0.25));
-              &:hover {
-                filter: invert(0.8) drop-shadow(0 0 10px rgba(0, 0, 0, 0.25));
-              }
-            }
-            &-tooltip {
-              @include font($font-contact-tooltip, "sans-serif");
-              position: absolute;
-              top: -40px;
-              left: 50%;
-              display: none;
-              background-color: $white;
-              border-radius: 4px;
-              color: $black;
-              padding: $paddingXs $paddingSm;
-              transform: translateX(-50%);
-              &::before {
-                content: "";
-                position: absolute;
-                bottom: -3px;
-                left: 50%;
-                width: 8px;
-                height: 8px;
-                background: $white;
-                transform: translate(-50%) rotate(45deg);
-                transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-              }
-            }
-          }
-          .nav__link:hover {
-            .nav__link-tooltip {
-              display: block;
-            }
-          }
+    .card__contact-link {
+      width: 100%;
+      position: relative;
+      &-img {
+        filter: invert(1);
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+      &-tooltip {
+        @include font($font-contact-tooltip, "sans-serif");
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        display: none;
+        background-color: $white;
+        border-radius: 4px;
+        color: $black;
+        padding: $paddingXs $paddingSm;
+        transform: translateX(-50%);
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -3px;
+          left: 50%;
+          width: 8px;
+          height: 8px;
+          background: $white;
+          transform: translate(-50%) rotate(45deg);
+          transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+      }
+      &:hover {
+        .card__contact-link-tooltip {
+          display: block;
         }
       }
     }
@@ -70,5 +58,16 @@
     @include positionAbsolute(70%, 50%);
     transform: translate(50%, 50%);
     white-space: nowrap;
+  }
+}
+
+@include mediaQuery("tablet") {
+  .card__contact {
+    width: 65% !important;
+  }
+}
+@include mediaQuery("mobile") {
+  .card__contact {
+    width: 75% !important;
   }
 }

@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" [class.active]="isMenuOpen">
   <button class="nav__button" (click)="toggleMenu()">
     <svg class="ham" viewBox="0 0 100 100" [ngClass]="{'active': isMenuOpen}">
       <path class="line top"

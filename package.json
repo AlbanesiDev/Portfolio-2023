@@ -27,8 +27,10 @@
     "ngx-moment": "^6.0.2",
     "ngx-owl-carousel-o": "^16.0.0",
     "rxjs": "~7.8.0",
+    "swiper": "^11.0.5",
     "three": "^0.155.0",
     "tslib": "^2.3.0",
+    "vanilla-tilt": "^1.8.1",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {

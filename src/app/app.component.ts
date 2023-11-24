@@ -10,10 +10,6 @@ export class AppComponent implements AfterViewInit {
 
   constructor(private el: ElementRef) {}
 
-  onContextMenu(event: MouseEvent): void {
-    event.preventDefault();
-  }
-
   ngAfterViewInit(): void {
     const sections = ['home', 'about-me', 'works', 'skills', 'contact'];
 

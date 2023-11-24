@@ -5,18 +5,12 @@
         </div>
         <div class="gradient"></div>
         <div class="card__contact">
-            <nav class="card__nav">
-                <ul class="nav__list">
-                    <ng-container *ngFor="let item of links">
-                        <li class="nav__item">
-                            <a class="nav__link" [href]="item.url" target="_blank">
-                              <span class="nav__link-tooltip">{{item.name}}</span>
-                                <img [src]="item.icon" [alt]="item.name">
-                            </a>
-                        </li>
-                    </ng-container>
-                </ul>
-            </nav>
+          <ng-container *ngFor="let item of links">
+            <a class="card__contact-link" [href]="item.url" target="_blank">
+              <span class="card__contact-link-tooltip">{{item.name}}</span>
+              <img class="card__contact-link-img" [src]="item.icon" [alt]="item.name">
+            </a>
+          </ng-container>
         </div>
         <span class="card__name">Joaquin Albanesi</span>
     </div>

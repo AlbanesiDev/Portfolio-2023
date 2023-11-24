@@ -4,9 +4,8 @@
       <span class="card__title">Habilidades</span>
     </div>
     <ng-container *ngFor="let skill of skillData; let i = index">
-      <div class="card__skill" [style.background]="getGradient(skill.color)">
+      <div class="card__skill" VanillaTilt [style.background]="getGradient(skill.color)">
         <img class="card__skill-img" [src]="skill.icon" alt="">
-        <span class="card__skill-name">{{skill.name}}</span>
       </div>
     </ng-container>
   </div>

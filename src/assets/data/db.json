@@ -22,25 +22,22 @@
     {
       "id": 1,
       "title": "Apple Store",
-      "description": "...",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nesciunt laborum expedita illum minima ducimus quod quisquam. Dictavoluptates veritatis facere autem, explicabo nemo sint ea recusandae eveniet iste ullam.Amet unde alias nesciunt ducimus, voluptatem rerum eligendi minima aspernatur incidunt non maiores odit voluptate nisi ratione possimus animi quam veniamquo numquam fugit aliquid magni repellendus esse? Error!Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nesciunt laborum expedita illum minima ducimus quod quisquam. Dictavoluptates veritatis facere autem, explicabo nemo sint ea recusandae eveniet iste ullam.Amet unde alias nesciunt ducimus, voluptatem rerum eligendi minima aspernatur incidunt non maiores odit voluptate nisi ratione possimus animi quam veniamquo numquam fugit aliquid magni repellendus esse? Error!",
       "img": "/assets/images/0.jpg",
       "code": "https://github.com/AlbanesiDev/Apple-store",
       "deploy": "https://apple-store.vercel.app",
       "carousel": [
         {
-          "img": "/assets/images/projects/apple-store/"
+          "img": "/assets/images/projects/apple-store/apple-store-0.png"
         },
         {
-          "img": "/assets/images/projects/apple-store/"
+          "img": "/assets/images/projects/apple-store/apple-store-1.png"
         },
         {
-          "img": "/assets/images/projects/apple-store/"
+          "img": "/assets/images/projects/apple-store/apple-store-2.png"
         },
         {
-          "img": "/assets/images/projects/apple-store/"
-        },
-        {
-          "img": "/assets/images/projects/apple-store/"
+          "img": "/assets/images/projects/apple-store/apple-store-3.png"
         }
       ],
       "stack": [
